@@ -11,9 +11,7 @@ const io = socketIo(server);
 
 // Configuración de CORS
 app.use(cors({
-  origin: '*', // Permitir todas las solicitudes desde cualquier origen para pruebas
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permitir todos los métodos HTTP
-  allowedHeaders: ['Content-Type', 'Authorization'] // Permitir los headers necesarios
+  origin: '*' // Permitir todas las solicitudes desde cualquier origen para pruebas
 }));
 
 app.use(express.json());
@@ -26,9 +24,8 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
-server.listen(PORT, HOST, () => {
-  console.log(`Server running on http://${HOST}:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = io;
