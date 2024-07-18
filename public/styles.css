@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-dark {
+  background-color: #1a1a1a;
+}
+
+.bg-primary {
+  background-color: #0f172a;
+}
+
+.bg-secondary {
+  background-color: #64748b;
+}
+
+input, button {
+  @apply rounded-md px-3 py-2 text-white;
+}
+
+button {
+  @apply bg-primary hover:bg-blue-700;
+}
+
+form {
+  @apply bg-secondary p-6 rounded-lg shadow-lg;
+}
+
+header {
+  @apply bg-primary p-4 text-center;
+}
+
+main {
+  @apply flex flex-col items-center justify-center min-h-screen;
+}
